@@ -89,6 +89,32 @@ Example (Costa Rican Spanish):
 
 ---
 
+# Updates
+
+**2025-10-08**
+
+### New
+
+- Default **Graphical Interface (Tkinter)** now launches automatically when running `python -m Stanza.main`.
+- The **text menu** remains available via `--cli`.
+- **Language selector** with editable dropdown (`ttk.Combobox`): choose from common options (`es`, `en`, `pt`, `fr`, `it`, `de`, `ca`, `gl`, `eu`, `ro`) or manually enter any language code supported by Stanza.
+- **“Browse…” buttons** added for:
+  - Input text file
+  - TSV file for charts
+  - TSV file for statistics
+
+### Fixes
+
+- **Manually entered TSV not recognized:** if a name like `test.tsv` is provided but the file doesn’t exist, the app now prompts you to locate it via a “Browse…” dialog, preventing invalid path errors.
+
+### Quality of Life
+
+- **Integrated console** within the GUI showing logs and progress messages.
+- **Background execution (threads)** prevents the window from freezing during analysis/export.
+- **Persistent configuration:** last-used parameters are saved in `config.json`.
+- **Quick mode** (`--quick-tsv`) allows direct TSV export (`output.tsv`) without opening the GUI.
+
+
 ## Contributing
 
 Contributions and pull requests are welcome. You can:
