@@ -1,5 +1,6 @@
 # -*- coding: utf-8 -*-
 from dataclasses import dataclass
+from typing import Optional
 
 @dataclass
 class MenuConfig:
@@ -12,17 +13,22 @@ class MenuConfig:
 class MenuChoice:
     kind: str
     # exportaciones
-    out_tsv: str | None = None
-    out_conllu: str | None = None
-    out_xlsx: str | None = None
-    out_json: str | None = None
-    base_name: str | None = None
+    out_tsv: Optional[str] = None
+    out_conllu: Optional[str] = None
+    out_xlsx: Optional[str] = None
+    out_json: Optional[str] = None
+    base_name: Optional[str] = None
     # plots
-    plots_from_tsv: str | None = None
-    plots_out_dir: str | None = None
-    wordcloud: bool | None = None
-    topk_lemmas: int | None = None
-    topk_deprel: int | None = None
+    plots_from_tsv: Optional[str] = None
+    plots_out_dir: Optional[str] = None
+    wordcloud: Optional[bool] = None
+    topk_lemmas: Optional[int] = None
+    topk_deprel: Optional[int] = None
+    # stats
+    stats_from_tsv: Optional[str] = None
+    stats_top_lemmas: Optional[int] = None
+    stats_window_cooc: Optional[int] = None
+    stats_out_xlsx: Optional[str] = None
 
 def print_header(cfg: MenuConfig):
     print("\n" + "=" * 60)
@@ -62,8 +68,9 @@ def menu_loop(cfg: MenuConfig) -> MenuChoice:
     print("5) Exportar TODO (pretty + .tsv + .conllu + .xlsx + .json)")
     print("6) Cambiar configuración (archivo, idioma, procesadores, GPU)")
     print("7) Generar gráficos (UPOS, lemas, NER, DEPREL, longitudes)")
-    print("0) Salir")
-    opt = input("\nElige una opción: ").strip()
+    print("8) Calcular estadísticas y exportar a Excel (stats)")
+    print("0) Salir  (también: q / quit / exit)")
+    opt = input("\nElige una opción: ").strip().lower()
 
     if opt == "1":
         return MenuChoice(kind="pretty")
@@ -114,9 +121,24 @@ def menu_loop(cfg: MenuConfig) -> MenuChoice:
             topk_deprel=topk_dep,
         )
 
-    elif opt == "0":
+    elif opt == "8":
+        # Stats -> rama soportada en main.py
+        tsv = ask("TSV de origen", "salida.tsv")
+        top_lem = ask_int("Top lemas (entero)", 50)
+        window = ask_int("Ventana de coocurrencia (entero)", 2)
+        out_xlsx = ask("Archivo Excel de salida", "estadisticas.xlsx")
+        return MenuChoice(
+            kind="stats",
+            stats_from_tsv=tsv,
+            stats_top_lemmas=top_lem,
+            stats_window_cooc=window,
+            stats_out_xlsx=out_xlsx,
+        )
+
+    elif opt in {"0", "q", "quit", "exit"}:
         return MenuChoice(kind="exit")
 
     else:
-        print("[!] Opción inválida.")
+        print("[!] Opción inválida. No se realizaron cambios.")
         return MenuChoice(kind="settings")
+
