@@ -91,6 +91,7 @@ Results will be exported as `salida.tsv`, `salida.conllu`, `salida.xlsx`, or `sa
 - CoNLL-U annotated text for syntactic parsing  
 - Visual plots of word frequencies, dependencies, and named entities  
 - Word clouds highlighting the most frequent lemmas  
+<img width="507" height="262" alt="{94B1E7C3-8A14-48D6-93F8-EC19594C75A3}" src="https://github.com/user-attachments/assets/4116b2b6-3566-4fa5-bd00-0735bba47ed4" />
 
 ---
 
