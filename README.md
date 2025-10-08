@@ -30,9 +30,8 @@ It allows you to perform full linguistic annotation, export results in multiple 
 - **Command-line interface and interactive menu**
 
   <p align="center">
-    <img alt="CLI and interactive menu" src="https://github.com/user-attachments/assets/37c398fb-8673-4561-a361-1802b4326746" width="907" height="687">
-  </p>
-
+    <img alt="CLI and interactive menu" src="https://github.com/user-attachments/assets/a0ae269f-0277-4a53-9a8e-5ccc331ec767" width="907" height="687">
+  </p> 
 
 ---
 
@@ -108,6 +107,19 @@ Example (Costa Rican Spanish):
 ---
 
 # Updates
+
+**2025-10-09 – GUI Modernization (CustomTkinter)**
+
+- The graphical interface was fully redesigned using **CustomTkinter** for a modern and responsive look.
+- The app now **always launches the GUI by default**, without needing the `--gui` flag.
+- Added a **language selector** (editable dropdown) with common options such as `es`, `en`, `pt`, `fr`, etc.
+- Added **file browser buttons ("Explore…")** for:
+  - Input text file
+  - TSV file for plots
+  - TSV file for statistics
+- Improved error handling: if the specified TSV or text file does not exist, the app asks the user to locate it.
+- The log console now updates dynamically while keeping the interface responsive.
+- Enhanced overall user experience (light/dark mode, smoother layout, and better scaling on different screens).
 
 **2025-10-08**
 
