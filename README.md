@@ -11,11 +11,17 @@ It allows you to perform full linguistic annotation, export results in multiple 
 
 - Linguistic analysis with Stanza (tokenization, POS tagging, lemmatization, dependency parsing, NER)
 - Exports to TSV, CoNLL-U, Excel, and JSON formats
+  <img width="565" height="462" alt="{6DB28EFD-10B6-4965-990F-1834AA5BF649}" src="https://github.com/user-attachments/assets/d9d1bfcd-7aea-4634-ba3b-16c52ecf5197" />
+
 - Visualization tools for POS, lemmas, dependencies, and NER tags
+<img width="565" height="462" alt="{6DB28EFD-10B6-4965-990F-1834AA5BF649}" src="https://github.com/user-attachments/assets/cd7b6b40-a50d-46ac-9e6d-d1a2eed93ad0" />
+
 - Automatic statistics (lemma frequencies, co-occurrences, sentence length, etc.)
+  <img width="201" height="147" alt="{02B7D649-F6DE-4999-9F35-408F7AC8564F}" src="https://github.com/user-attachments/assets/36cf244a-72c5-47e9-877c-cc626339bf47" />
+
 - Persistent configuration (`config.json`)
 - Command-line interface and interactive menu
-- Special support for Spanish and Costa Rican Spanish corpora
+<img width="907" height="687" alt="{F8B946AD-18E1-4FD6-A325-7E128063013C}" src="https://github.com/user-attachments/assets/37c398fb-8673-4561-a361-1802b4326746" />
 
 ---
 
