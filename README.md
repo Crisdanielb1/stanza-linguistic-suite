@@ -2,7 +2,7 @@
 
 **Extensible Stanza-based toolkit for linguistic analysis, corpus export, and visualization.**
 
-This project provides a modular interface built on [Stanza](https://stanfordnlp.github.io/stanza/) for processing Spanish texts (including Costa Rican Spanish, which is the main purpose, but not limited to).  
+This project provides a modular interface built on [Stanza](https://stanfordnlp.github.io/stanza/) for processing linguistic texts (corpora) in .txt format.  
 It allows you to perform full linguistic annotation, export results in multiple formats, and generate visual summaries automatically.
 
 ---
