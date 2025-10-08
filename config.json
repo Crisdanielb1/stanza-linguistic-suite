@@ -1,0 +1,6 @@
+{
+    "lang": "es",
+    "use_gpu": false,
+    "default_text": "mi_texto.txt",
+    "processors": "tokenize,mwt,pos,lemma,depparse,ner"
+}
