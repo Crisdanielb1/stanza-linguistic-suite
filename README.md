@@ -21,6 +21,7 @@ It allows you to perform full linguistic annotation, export results in multiple 
 
 ## Project Structure
 
+```
 Stanza/
 ├── main.py               # Main entry point (CLI + menu)
 ├── menu.py               # Interactive text menu
@@ -31,6 +32,7 @@ Stanza/
 │   ├── stats.py          # Frequency and co-occurrence analysis
 │   └── utils.py          # Config, I/O, and validation utilities
 └── config.json           # Persistent settings
+```
 
 ---
 
